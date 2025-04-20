@@ -39,7 +39,7 @@ int main()
     printf("CARTA 2:\n");  
     
     printf("Estado:");  
-    getchar();
+    getchar();//coloquei esse getchar porque estava lendo o enter da outra variavel
     scanf("%c",&estado2);  
     
     printf("Código:");  
