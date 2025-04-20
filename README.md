@@ -38,7 +38,7 @@ Um jogo de Super Trunfo simplificado para comparar características de duas cida
 
 ## 👨‍🎓 Desenvolvedor:
 
-[Seu Nome Aqui]
+[Javan Oliveira]
 
 ## 📚 Aprendizados:
 
