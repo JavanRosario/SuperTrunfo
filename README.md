@@ -1,1 +1,1 @@
-Projeto Super Trunfo da faculdade
+🃏 Super Trunfo da Faculdade 🃏
