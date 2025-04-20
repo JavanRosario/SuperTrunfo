@@ -1,0 +1,1 @@
+# 🃏 Super Trunfo da Faculdade 🃏
