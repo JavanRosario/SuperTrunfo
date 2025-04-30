@@ -8,8 +8,8 @@ int main()
     char codigo1[10], codigo2[10];
     char cidade1[20], cidade2[20];
     
-    unsigned long int  populacao1 = 0, populacao2 = 0;
-    unsigned long int  turistico1 = 0, turistico2 = 0;
+    int     populacao1 = 0, populacao2 = 0;
+    int    turistico1 = 0, turistico2 = 0;
     
     double area1 = 0, area2 = 0;
     double pib1 = 0, pib2 = 0;
@@ -31,7 +31,7 @@ int main()
     cidade1[strcspn(cidade1, "\n")] = 0;
 
     printf("Tamanho da População: ");  
-    scanf("%lu", &populacao1);  
+    scanf("%d", &populacao1);  
 
     printf("Digite a Área (em km²): ");  
     scanf("%lf", &area1); 
@@ -56,7 +56,7 @@ int main()
     cidade2[strcspn(cidade2, "\n")] = 0;
 
     printf("Tamanho da População: ");  
-    scanf("%lu", &populacao2);  
+    scanf("%d", &populacao2);  
 
     printf("Digite a Área (em km²): ");  
     scanf("%lf", &area2); 
@@ -82,10 +82,10 @@ int main()
     printf("Estado: %c\n", estado1);    
     printf("Código: %s\n", codigo1);
     printf("Nome da Cidade: %s\n", cidade1);
-    printf("População: %lu\n", populacao1);
+    printf("População: %d\n", populacao1);
     printf("Área: %.2f km²\n", area1);
     printf("PIB: %.2f bilhões de reais\n", pib1);
-    printf("Número de Pontos Turísticos: %lu\n", turistico1);
+    printf("Número de Pontos Turísticos: %d\n", turistico1);
     printf("Densidade Populacional: %.2f hab/km²\n", densidade1);
     printf("PIB per Capita: %.2f reais\n", pibperCapita1);
 
@@ -93,21 +93,65 @@ int main()
     printf("Estado: %c\n", estado2);
     printf("Código: %s\n", codigo2);
     printf("Nome da Cidade: %s\n", cidade2);
-    printf("População: %lu\n", populacao2);
+    printf("População: %d\n", populacao2);
     printf("Área: %.2f km²\n", area2);
     printf("PIB: %.2f bilhões de reais\n", pib2);
-    printf("Número de Pontos Turísticos: %lu\n", turistico2);
+    printf("Número de Pontos Turísticos: %d\n", turistico2);
     printf("Densidade Populacional: %.2f hab/km²\n", densidade2);
     printf("PIB per Capita: %.2f reais\n", pibperCapita2);
     // resultado das cartas
+    // agora com if e else
     printf("=====================COMPARAÇÃO DE CARTAS=========================\n");
-    printf("População: A carta 1 VENCEU?: %d\n",(populacao1>populacao2));
-    printf("Área: A carta 1 VENCEU?: %d\n",(area1 > area2));
-    printf("PIB: A carta 1 VENCEU?: %d\n" , (pib1 > pib2));
-    printf("Pontos Turísticos: A carta um VENCEU?: %d\n",(turistico1 > turistico2));
-    printf("Densidade Populacional: A carta 1 VENCEU?: %d\n",(densidade1 < densidade2));
-    printf("PIB per Capta: A carta 1 VENCEU?: %d\n",(pibperCapita1 > pibperCapita2));
-    printf("Superpoder: A carta 1 venceu?: %d\n",(superPoder1>superPoder2));
+    
+    printf("=====================ATRIBUTO POPULAÇÃO===========================\n");
+    
+    if (populacao1>populacao2){
+        printf("Carta 1 venceu! %d é maior que %d\n",populacao1,populacao2);
+    }
+    else{
+        printf("Carta 2 venceu! %d é maior que %d\n",populacao2,populacao1);
+    }
+    
+    printf("=====================ATRIBUTO ÁREA===========================\n");
+   
+    if (area1>area2){
+        printf("Carta 1 venceu! %.2f é maior que %.2f\n",area1,area2);
+    }
+    else{
+        printf("Carta 2 venceu! %.2f é maior que %.2f\n",area2,area1);
+    }
+    printf("=====================ATRIBUTO PIB===========================\n");
+   
+    if (pib1>pib2){
+        printf("Carta 1 venceu! %.2f é maior que %.2f\n",pib1,pib2);
+    }
+    else{
+        printf("Carta 2 venceu! %.2f é maior que %.2f\n",pib2,pib1);
+    }
+    printf("=====================ATRIBUTO PONTO TURÍSTICO===========================\n");
+   
+    if (turistico1>turistico2){
+        printf("Carta 1 venceu! %d é maior que %d\n",turistico1,turistico2);
+    }
+    else{
+        printf("Carta 2 venceu! %d é maior que %d\n",turistico2,turistico1);
+    }
+    printf("=====================ATRIBUTO DENSIDADE POLULACIONAL===========================\n");
+   
+    if (densidade1<densidade2){
+        printf("Carta 1 venceu! %.2f é MENOR que %.2f\n",densidade1,densidade2);
+    }
+    else{
+        printf("Carta 2 venceu! %.2f é MENOR que %.2f\n",densidade2,densidade1);
+    }
+    printf("=====================ATRIBUTO PIB PERCAPTA===========================\n");
+   
+    if (pibperCapita1>pibperCapita2){
+        printf("Carta 1 venceu! %.2f é MENOR que %.2f\n",pibperCapita1,pibperCapita2);
+    }
+    else{
+        printf("Carta 2 venceu! %.2f é MENOR que %.2f\n",pibperCapita2,pibperCapita1);
+    }
     return 0;
 }
  
