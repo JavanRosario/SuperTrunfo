@@ -1,89 +1,72 @@
-🃏 Super Trunfo de Cidades
-Um jogo interativo em linguagem C no estilo Super Trunfo, onde você compara atributos de duas cidades e descobre qual vence com base no critério escolhido.
+# 🃏 Super Trunfo de Cidades
 
-⚙️ Como Executar
-Compile o código:
+Um jogo de **Super Trunfo** simplificado desenvolvido em C, onde você pode comparar atributos de duas cidades para determinar qual delas "vence" de acordo com o critério escolhido.
 
-bash
-Copiar
-Editar
-gcc super_trunfo.c -o super_trunfo
-Execute o programa:
+## ⚙️ Como Executar
 
-bash
-Copiar
-Editar
-./super_trunfo
-Siga as instruções no terminal para:
+Para compilar e executar o programa, siga os seguintes passos:
 
-Inserir os dados das duas cidades.
+1. Compile o código com o comando:
+   ```bash
+   gcc super_trunfo.c -o super_trunfo
+   ```
 
-Escolher um atributo para comparar.
+2. Execute o programa com:
+   ```bash
+   ./super_trunfo
+   ```
 
-Ver qual cidade vence!
+3. Siga as instruções no terminal para inserir os dados de duas cidades e realizar a comparação dos atributos.
 
-🎮 Funcionalidades
-Permite entrada dos seguintes dados para duas cidades:
+## 🎮 Funcionalidades
 
-Estado (char)
+- O jogo permite a inserção das informações de **duas cidades**:
+  - Estado da cidade (caractere)
+  - Código da cidade (string)
+  - Nome da cidade (string)
+  - População (inteiro)
+  - Área (em km², tipo double)
+  - PIB (em bilhões, tipo double)
+  - Número de pontos turísticos (inteiro)
+  
+- O jogo **calcula automaticamente**:
+  - Densidade populacional
+  - PIB per capita
+  - Super poder (um atributo calculado com base em várias características)
 
-Código da cidade (string)
+- Exibe os dados das duas cartas (cidades) inseridas e permite ao jogador escolher um atributo para comparar, como:
+  - População
+  - Área
+  - PIB
+  - Pontos turísticos
+  - Densidade populacional
+  - PIB per capita
 
-Nome da cidade (string)
+- Caso o jogador opte por um critério de comparação, o programa avalia as cidades e imprime o vencedor ou um empate.
 
-População (int)
+## 💻 Tecnologias Utilizadas
 
-Área (double)
+- **Linguagem de Programação**: C
+- **Bibliotecas**:
+  - `stdio.h` para entrada e saída de dados
+  - `string.h` para manipulação de strings
 
-PIB (double em bilhões)
+## 👨‍🎓 Desenvolvedor
 
-Pontos Turísticos (int)
+**Javan Oliveira**
 
-Calcula automaticamente:
+## 📚 Aprendizados
 
-Densidade Populacional
+- Manipulação de diferentes tipos de dados: `char`, `int`, `double`, `string`
+- Cálculos de indicadores urbanos **densidade populacional** e **PIB per capita**
+- Estruturação de um jogo simples com **entrada de dados**, **comparação de valores** e **exibição de resultados**
+- Tratamento de buffer de entrada usando `getchar()` e `fgets()`
+- Lógica de controle de fluxo com **switch** e **if-else**
 
-PIB per Capita
+## 📝 Notas
 
-Super Poder (pontuação geral da cidade com base em múltiplos atributos)
+Este é um **projeto acadêmico** básico para ilustrar a entrada e saída de dados em C, com foco na manipulação de dados urbanos e a implementação de um jogo simples. O código não implementa a lógica completa do Super Trunfo, mas sim a base para comparação de atributos entre duas cidades.
 
-Exibe todas as informações de ambas as cidades.
+---
 
-Permite ao jogador escolher qual atributo deseja comparar:
-
-1️⃣ População
-
-2️⃣ Área
-
-3️⃣ PIB
-
-4️⃣ Pontos Turísticos
-
-5️⃣ Densidade Populacional (quanto menor, melhor)
-
-6️⃣ PIB per Capita (quanto maior, melhor)
-
-Utiliza switch-case e if-else para lógica de comparação com possibilidade de empate.
-
-💻 Tecnologias Utilizadas
-Linguagem de Programação: C
-
-Bibliotecas: stdio.h, string.h
-
-👨‍🎓 Desenvolvedor
-Javan Oliveira
-
-📚 Aprendizados no Projeto
-Entrada e saída de dados (scanf, printf, fgets, getchar)
-
-Manipulação de múltiplos tipos: char, int, double, float, string
-
-Cálculos matemáticos com dados inseridos pelo usuário
-
-Boas práticas com o buffer de entrada (getchar() após scanf)
-
-Uso de switch-case para criar menus interativos
-
-Comparações condicionais com if, else if, else
-
-Organização e clareza na estrutura do código
+Desenvolvido para fins educacionais.
