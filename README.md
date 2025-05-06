@@ -1,49 +1,89 @@
-# 🃏 Super Trunfo de Cidades (Projeto Faculdade) 🃏
+🃏 Super Trunfo de Cidades
+Um jogo interativo em linguagem C no estilo Super Trunfo, onde você compara atributos de duas cidades e descobre qual vence com base no critério escolhido.
 
-Um jogo de Super Trunfo simplificado para comparar características de duas cidades.
+⚙️ Como Executar
+Compile o código:
 
-## ⚙️ Como Executar:
+bash
+Copiar
+Editar
+gcc super_trunfo.c -o super_trunfo
+Execute o programa:
 
-1.  Compile o código C:
-    ```bash
-    gcc seu_arquivo.c -o super_trunfo
-    ```
-2.  Execute o programa:
-    ```bash
-    ./super_trunfo
-    ```
-3.  Siga as instruções no terminal para inserir os dados de duas cartas (cidades).
+bash
+Copiar
+Editar
+./super_trunfo
+Siga as instruções no terminal para:
 
-## 🎮 Funcionalidades:
+Inserir os dados das duas cidades.
 
-* Permite inserir informações básicas de duas cidades:
-    * Estado (caractere)
-    * Código (string)
-    * Nome da Cidade (string)
-    * População (inteiro)
-    * Área (double)
-    * PIB (float)
-    * Número de Pontos Turísticos (inteiro)
-* Exibe os dados inseridos para cada cidade (CARTA 1 e CARTA 2).
+Escolher um atributo para comparar.
 
-## 💻 Tecnologias Utilizadas:
+Ver qual cidade vence!
 
-* Linguagem de Programação: C
+🎮 Funcionalidades
+Permite entrada dos seguintes dados para duas cidades:
 
-## 📝 Notas:
+Estado (char)
 
-* Este é um projeto básico para fins acadêmicos.
-* Não implementa a lógica completa do jogo Super Trunfo (comparação de cartas, etc.).
-* O código foca na entrada e saída de dados das cartas.
+Código da cidade (string)
 
-## 👨‍🎓 Desenvolvedor:
+Nome da cidade (string)
 
-[Javan Oliveira]
+População (int)
 
-## 📚 Aprendizados:
+Área (double)
 
-* Entrada e saída de dados em C (`printf`, `scanf`, `fgets`, `getchar`).
-* Manipulação de diferentes tipos de dados (char, int, double, float, string).
-* Noções básicas de estrutura de um programa em C.
-* Tratamento de buffer de entrada (com `getchar()` para consumir a nova linha).
-* Utilização da biblioteca `string.h` (função `strcspn`).
+PIB (double em bilhões)
+
+Pontos Turísticos (int)
+
+Calcula automaticamente:
+
+Densidade Populacional
+
+PIB per Capita
+
+Super Poder (pontuação geral da cidade com base em múltiplos atributos)
+
+Exibe todas as informações de ambas as cidades.
+
+Permite ao jogador escolher qual atributo deseja comparar:
+
+1️⃣ População
+
+2️⃣ Área
+
+3️⃣ PIB
+
+4️⃣ Pontos Turísticos
+
+5️⃣ Densidade Populacional (quanto menor, melhor)
+
+6️⃣ PIB per Capita (quanto maior, melhor)
+
+Utiliza switch-case e if-else para lógica de comparação com possibilidade de empate.
+
+💻 Tecnologias Utilizadas
+Linguagem de Programação: C
+
+Bibliotecas: stdio.h, string.h
+
+👨‍🎓 Desenvolvedor
+Javan Oliveira
+
+📚 Aprendizados no Projeto
+Entrada e saída de dados (scanf, printf, fgets, getchar)
+
+Manipulação de múltiplos tipos: char, int, double, float, string
+
+Cálculos matemáticos com dados inseridos pelo usuário
+
+Boas práticas com o buffer de entrada (getchar() após scanf)
+
+Uso de switch-case para criar menus interativos
+
+Comparações condicionais com if, else if, else
+
+Organização e clareza na estrutura do código
