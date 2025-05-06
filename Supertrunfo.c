@@ -15,7 +15,9 @@ int main()
     double pib1 = 0, pib2 = 0;
     double densidade1 = 0, pibperCapita1 = 0, densidade2 = 0, pibperCapita2 = 0;
 
-     float superPoder1 = 0, superPoder2 = 0;
+    float superPoder1 = 0, superPoder2 = 0;
+    
+    int opcao;
 
     // CARTA 1 
     printf("CARTA: 1\n");  
@@ -102,55 +104,80 @@ int main()
     // resultado das cartas
     // agora com if e else
     printf("=====================COMPARAÇÃO DE CARTAS=========================\n");
+    printf("Qual atributo deseja escolher?\n");
+    printf("POPULAÇÃO (1)\nÁREA(2)\nPIB(3)\nPONTOS TURÍSTICOS(4)\nDENSIDADE POPULACIONAL(5)\nPIB PERCAPTA(6)\n");
+    scanf("%d",&opcao);
+
+    //agora adicionando o switch para escolher as opçoes e melhorias no if else com possibilidade de empate
+    switch(opcao){
+    case 1:
+        printf("=====================ATRIBUTO POPULAÇÃO===========================\n");
     
-    printf("=====================ATRIBUTO POPULAÇÃO===========================\n");
-    
-    if (populacao1>populacao2){
-        printf("Carta 1 venceu! %d é maior que %d\n",populacao1,populacao2);
-    }
-    else{
-        printf("Carta 2 venceu! %d é maior que %d\n",populacao2,populacao1);
-    }
-    
-    printf("=====================ATRIBUTO ÁREA===========================\n");
+        if (populacao1>populacao2){
+            printf("Carta 1 venceu! %d é maior que %d\n",populacao1,populacao2);
+        }else if(populacao1 == populacao2){
+            printf("EMPATE!\n");
+        }
+        else{
+            printf("Carta 2 venceu! %d é maior que %d\n",populacao2,populacao1);
+        }
+        break;
+    case 2:
+        printf("=====================ATRIBUTO ÁREA===========================\n");
    
-    if (area1>area2){
-        printf("Carta 1 venceu! %.2f é maior que %.2f\n",area1,area2);
-    }
-    else{
-        printf("Carta 2 venceu! %.2f é maior que %.2f\n",area2,area1);
-    }
-    printf("=====================ATRIBUTO PIB===========================\n");
+        if (area1>area2){
+            printf("Carta 1 venceu! %.2f é maior que %.2f\n",area1,area2);
+        }else if(area1 == area2){
+            printf("EMPATE\n");
+        }else{
+            printf("Carta 2 venceu! %.2f é maior que %.2f\n",area2,area1);
+        }
+        break;
+    case 3:
+        printf("=====================ATRIBUTO PIB===========================\n");
    
-    if (pib1>pib2){
-        printf("Carta 1 venceu! %.2f é maior que %.2f\n",pib1,pib2);
-    }
-    else{
-        printf("Carta 2 venceu! %.2f é maior que %.2f\n",pib2,pib1);
-    }
-    printf("=====================ATRIBUTO PONTO TURÍSTICO===========================\n");
+        if (pib1>pib2){
+            printf("Carta 1 venceu! %.2f é maior que %.2f\n",pib1,pib2);
+        }else if (pib1 == pib2){
+            printf("EMPATE\n");
+        }else{
+            printf("Carta 2 venceu! %.2f é maior que %.2f\n",pib2,pib1);
+        }
+        break;
+    case 4:
+        printf("=====================ATRIBUTO PONTO TURÍSTICO===========================\n");
    
-    if (turistico1>turistico2){
-        printf("Carta 1 venceu! %d é maior que %d\n",turistico1,turistico2);
-    }
-    else{
-        printf("Carta 2 venceu! %d é maior que %d\n",turistico2,turistico1);
-    }
-    printf("=====================ATRIBUTO DENSIDADE POLULACIONAL===========================\n");
+        if (turistico1>turistico2){
+            printf("Carta 1 venceu! %d é maior que %d\n",turistico1,turistico2);
+        }
+        else{
+            printf("Carta 2 venceu! %d é maior que %d\n",turistico2,turistico1);
+        }
+        break;
+    case 5:
+        printf("=====================ATRIBUTO DENSIDADE POLULACIONAL===========================\n");
    
-    if (densidade1<densidade2){
-        printf("Carta 1 venceu! %.2f é MENOR que %.2f\n",densidade1,densidade2);
-    }
-    else{
-        printf("Carta 2 venceu! %.2f é MENOR que %.2f\n",densidade2,densidade1);
-    }
-    printf("=====================ATRIBUTO PIB PERCAPTA===========================\n");
+        if (densidade1<densidade2){
+            printf("Carta 1 venceu! %.2f é MENOR que %.2f\n",densidade1,densidade2);
+        }else if(densidade1 == densidade2) {
+            printf("EMPATE\n");
+        }else{
+            printf("Carta 2 venceu! %.2f é MENOR que %.2f\n",densidade2,densidade1);
+        }
+        break;
+    case 6:
+        printf("=====================ATRIBUTO PIB PERCAPTA===========================\n");
    
-    if (pibperCapita1>pibperCapita2){
-        printf("Carta 1 venceu! %.2f é MENOR que %.2f\n",pibperCapita1,pibperCapita2);
-    }
-    else{
-        printf("Carta 2 venceu! %.2f é MENOR que %.2f\n",pibperCapita2,pibperCapita1);
+        if (pibperCapita1>pibperCapita2){
+            printf("Carta 1 venceu! %.2f é MENOR que %.2f\n",pibperCapita1,pibperCapita2);
+        }else if(pibperCapita1 == pibperCapita2){
+            printf("EMPATE\n");
+        }else{
+            printf("Carta 2 venceu! %.2f é MENOR que %.2f\n",pibperCapita2,pibperCapita1);
+        }
+        break;
+    default:
+        printf("OPÇÃO ERRADA");
     }
     return 0;
 }
